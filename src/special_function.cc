@@ -1373,7 +1373,7 @@ void bessel_hn_scaled(int nb, double x, double scale, dcomplex_t *B) {
     double xscale1 =  x * scale;
     double xscale2 = scale / x;
     double t1 = 1.0;
-    double t2 = 1.0;
+    double t2 = 1.0 / x;
     double factor = 0.5 * x * x;
     Jn[0] = t1 * (1.0 - factor / 3.0);
     Yn[0] = -(1.0 - factor) / x;
